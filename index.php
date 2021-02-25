@@ -1,10 +1,8 @@
 <?php
-$nome = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.';
-$nome = str_replace("ipsum", "***", $nome);
-echo $nome;
+$paragraf = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.';
+$word = $_GET["badword"];
+$newParagraf = str_replace($word, "***", $paragraf);
 $lunghezza = strlen($nome);
-echo "<br>";
-echo "Lunghezza stringa: " .$lunghezza;
 ?>
 
 <!DOCTYPE html>
@@ -17,7 +15,9 @@ echo "Lunghezza stringa: " .$lunghezza;
 </head>
 <body>
 
-
+  <p>Paragrafo: <?php echo $paragraf; ?></p>
+  <p>Nuovo paragrafo: <?php echo $newParagraf ?></p>
+  <p><?php echo "Lunghezza stringa: " .$lunghezza; ?></p>
 
 </body>
 </html>
